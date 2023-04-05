@@ -4,4 +4,5 @@ export type InputValues = {
 };
 export interface Task extends InputValues {
   id: string;
+  checked: boolean
 }

@@ -17,7 +17,7 @@ const Form: FC<FormProps> = (props) => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    const formPayload = {...formData, id: crypto.randomUUID()}
+    const formPayload = {...formData, id: crypto.randomUUID(), checked: false}
     props.handleSubmit(formPayload);
   };
 
