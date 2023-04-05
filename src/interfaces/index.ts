@@ -1,2 +1,3 @@
-import Task from "./task"
-export default Task;
+import { Task, InputValues} from './task'
+
+export type { Task, InputValues };

@@ -1,5 +1,5 @@
-import React from "react";
 import useTaskStore from "../../context/taskList";
+import TaskItem from "./TaskItem";
 
 const TaskList = () => {
   const taskList = useTaskStore((state) => state.taskList);
@@ -11,11 +11,8 @@ const TaskList = () => {
       {!taskList.length ? (
         <p>nenhum item a ser mostrado</p>
       ) : (
-        taskList.map((eachTask, index) => (
-          <div key={index}>
-            <h1>{eachTask.taskName}</h1>
-            <h2>{eachTask.category}</h2>
-          </div>
+        taskList.map((eachTask) => (
+          <TaskItem {...eachTask} key={eachTask.id} />
         ))
       )}
     </div>
