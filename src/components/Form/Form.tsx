@@ -38,14 +38,13 @@ const Form: FC<FormProps> = (props) => {
       className="rounded-sm bg-white p-5 md:flex md:items-center mb-6 f"
     >
       {Object.entries(formData).map(([name, value], index) => (
-        <div key={index}>
-          <Input
-            name={name}
-            value={value}
-            label={name}
-            onChange={handleChange}
-          />
-        </div>
+        <Input
+          name={name}
+          value={value}
+          label={name}
+          onChange={handleChange}
+          key={index}
+        />
       ))}
       <SubmitButton>Enviar</SubmitButton>
     </S.Form>
