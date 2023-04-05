@@ -1,10 +1,10 @@
 import React, { FC, FormHTMLAttributes, ReactNode, useState } from "react";
 import Input from "./Input";
 import SubmitButton from "./SubmitButton";
-
+import Task from "../../interfaces";
 interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
-  handleSubmit: (formData: string) => void;
-  initialValues: Record<string, string>;
+  handleSubmit: (formData: Task) => void;
+  initialValues: Task;
 }
 
 const Form: FC<FormProps> = (props) => {
@@ -17,10 +17,8 @@ const Form: FC<FormProps> = (props) => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    console.log(formData);
-    const formPayload = JSON.stringify(formData);
-    console.log(formPayload);
-    props.handleSubmit(formPayload);
+    const formPayload = Object.create(formData);
+    props.handleSubmit(formData);
   };
 
   return (

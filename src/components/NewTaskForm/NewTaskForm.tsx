@@ -1,14 +1,19 @@
+import useTaskStore from "../../context/taskList";
+import Task from "../../interfaces";
 import { Form } from "../Form";
 
 const NewTaskForm = () => {
-  const handleSubmit = (formData: string) => {
+  const addTask = useTaskStore((state) => state.addTask)
+
+  const handleSubmit = (formData: Task) => {
     //TODO Redux
-    console.log(formData);
+    console.log(formData)
+    addTask(formData);
   };
 
   const initialValues = {
-    tarefa: "",
-    categoria: "",
+    taskName: "",
+    category: "",
   };
 
   return <Form handleSubmit={handleSubmit} initialValues={initialValues} />;
