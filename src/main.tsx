@@ -1,23 +1,24 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-import Home from './pages/Home'
-import {
-  createBrowserRouter, RouterProvider
-} from 'react-router-dom'
-import ErrorPage from './pages/ErrorPage'
+import Home from "./pages/Home";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./pages/ErrorPage";
+import { GlobalStyle } from "./styles/global";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Home />,
-    errorElement: <ErrorPage />
-  }
-])
+    errorElement: <ErrorPage />,
+  },
+]);
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+    <>
+      <GlobalStyle />
+      <RouterProvider router={router} />
+    </>
+  </React.StrictMode>
+);
