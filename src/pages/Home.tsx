@@ -1,14 +1,13 @@
-import Header from "../components/Header"
-
+import { Header } from "../components/Header";
+import { NewTaskForm } from "../components/NewTaskForm";
 
 function Home() {
-
   return (
     <div className="home">
       <Header />
-      Hello World
+      <NewTaskForm />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
