@@ -4,19 +4,10 @@ import { useTaskStore } from "../../store/";
 import * as S from "./style";
 
 const TaskItem: FC<Task> = ({ id, taskName, category, checked }) => {
-  const [removeTask, toggleChecked, taskList] = useTaskStore((state) => [
+  const [removeTask, toggleChecked] = useTaskStore((state) => [
     state.removeTask,
     state.toggleChecked,
-    state.taskList,
   ]);
-
-  const index = taskList.findIndex((eachTask) => eachTask.id === id);
-
-  useEffect(() => {
-    console.log('render');
-  
-  }, [checked])
-  
 
   const handleToggle = () => {
     toggleChecked(id);
