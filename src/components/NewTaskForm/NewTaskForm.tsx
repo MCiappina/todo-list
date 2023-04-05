@@ -1,5 +1,5 @@
-import useTaskStore from "../../context/taskList";
-import { InputValues, Task } from "../../interfaces";
+import { useTaskStore } from "../../store/";
+import { InputValues, Task } from "../../types";
 import { Form } from "../Form";
 
 const NewTaskForm = () => {

@@ -1,7 +1,7 @@
 import React, { FC, FormHTMLAttributes, useState, useId, useEffect } from "react";
 import Input from "./Input";
 import SubmitButton from "./SubmitButton";
-import { InputValues, Task } from "../../interfaces";
+import { InputValues, Task } from "../../types";
 interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
   handleSubmit: (formData: Task) => void;
   initialValues: InputValues;

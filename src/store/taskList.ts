@@ -1,12 +1,10 @@
 import { create } from "zustand";
-import { Task } from "../interfaces";
-import { TaskList } from "../components/TaskList";
+import { Task } from "../types";
 interface TaskState {
   taskList: Array<Task>;
   addTask: (task: Task) => void;
   removeTask: (taskId: string) => void;
   toggleChecked: (taskId: string) => void;
-
 }
 
 const useTaskStore = create<TaskState>((set) => ({

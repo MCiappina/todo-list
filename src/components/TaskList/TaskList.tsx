@@ -1,10 +1,8 @@
-import useTaskStore from "../../context/taskList";
+import { useTaskStore } from "../../store/";
 import TaskItem from "./TaskItem";
 
 const TaskList = () => {
   const taskList = useTaskStore((state) => state.taskList);
-
-  console.log(taskList);
 
   return (
     <div>

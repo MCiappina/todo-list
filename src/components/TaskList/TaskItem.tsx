@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import { Task } from "../../interfaces";
-import useTaskStore from "../../context/taskList";
+import { Task } from "../../types";
+import { useTaskStore } from "../../store/";
 
 const TaskItem: FC<Task> = ({ id, taskName, category, checked }) => {
   const [removeTask, toggleChecked] = useTaskStore((state) => [
