@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
-import { BarIcon } from "../Icons";
 
 export const PrimaryNav = styled.nav`
   z-index: 14;
