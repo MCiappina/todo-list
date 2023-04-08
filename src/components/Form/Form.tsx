@@ -1,10 +1,4 @@
-import React, {
-  FC,
-  FormHTMLAttributes,
-  useState,
-  useId,
-  useEffect,
-} from "react";
+import React, { FC, FormHTMLAttributes, useState } from "react";
 import Input from "./Input";
 import SubmitButton from "./SubmitButton";
 import { InputValues, Task } from "../../types";
@@ -30,6 +24,7 @@ const Form: FC<FormProps> = (props) => {
       checked: false,
     };
     props.handleSubmit(formPayload);
+    setFormData({...props.initialValues})
   };
 
   return (
