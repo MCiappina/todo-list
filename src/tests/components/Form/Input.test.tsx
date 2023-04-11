@@ -1,6 +1,6 @@
-import { render, fireEvent, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { Form, Input } from "../components/Form";
+import { render, screen } from "@testing-library/react";
+import { Input } from "../../../components/Form";
 import userEvent from "@testing-library/user-event";
 
 const MOCK_ATTRIBUTES = {

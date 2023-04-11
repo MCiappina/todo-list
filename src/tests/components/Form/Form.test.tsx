@@ -1,6 +1,6 @@
-import { render, fireEvent, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { Form } from "../components/Form";
+import { render, fireEvent, screen } from "@testing-library/react";
+import { Form } from "../../../components/Form";
 import userEvent from "@testing-library/user-event";
 
 const mockHandleSubmit = jest.fn();
