@@ -10,7 +10,7 @@ const Input: FC<InputProps> = ({ name, label, ...rest }) => {
   return (
     <S.InputWrapper>
       <label htmlFor={name}>{label}</label>
-      <input role="input" id={name} {...rest} data-testid={name} name={name} type="text" placeholder={`Change ${label}`}/>
+      <input aria-label={name} id={name} {...rest} data-testid={name} name={name} type="text" placeholder={`Change ${label}`}/>
     </S.InputWrapper>
   );
 };

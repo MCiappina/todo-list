@@ -29,7 +29,7 @@ const Form: FC<FormProps> = (props) => {
   };
 
   return (
-    <S.Form data-testid='form' role="form" name="form" onSubmit={handleSubmit}>
+    <S.Form data-testid='form' aria-label="form" name="form" onSubmit={handleSubmit}>
       {Object.entries(formData).map(([name, value], index) => (
         <Input
           name={name}

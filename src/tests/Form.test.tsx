@@ -67,7 +67,7 @@ describe("Form component", () => {
     render(
       <Form handleSubmit={mockHandleSubmit} initialValues={MOCK_INITIAL_VALUES} />
     );
-    const inputList = screen.getAllByRole("input");
+    const inputList = screen.getAllByRole("textbox");
     expect(inputList.length).toBe(Object.keys(MOCK_INITIAL_VALUES).length)
   });
 });

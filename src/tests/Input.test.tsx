@@ -18,6 +18,13 @@ describe("Input component", () => {
     expect(input).toBeInTheDocument();
   });
 
+  it('should render corresponding label', () => {
+    render(<Input {...MOCK_ATTRIBUTES} onChange={mockHandleChange} />);
+    const label = screen.getByText(MOCK_ATTRIBUTES.label);
+
+    expect(label).toBeInTheDocument();
+  })
+
   it("handleChange should be called and change input value", async () => {
     render(<Input {...MOCK_ATTRIBUTES} onChange={mockHandleChange} />);
     const input = screen.getByLabelText(MOCK_ATTRIBUTES.label);
